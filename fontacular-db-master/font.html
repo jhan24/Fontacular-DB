@@ -1,0 +1,74 @@
+<div>
+    <div style="padding-left:2%; padding-top:1%; font-size:150%"><strong>{{font.fontName}}</strong></div>
+    <style type="text/css">
+        @font-face {font-family: currentFont;src: url("http://api.fontacular.com/fonts/{{font.id}}/render");}
+    </style>
+    <div style="font-size:200%; padding-top:0.5%; font-family: currentFont;" align="center">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+    <div style="font-size:200%; font-family: currentFont;" align="center">abcdefghijklmnopqrstuvwxyz</div>
+    <div style="font-size:200%; padding-bottom:1%; font-family: currentFont;" align="center">0123456789</div>
+    
+    <div style="border-bottom: 2px solid #ccc;"></div>
+    
+    <div class="container" style="padding-top:3%">                                                                                     
+        <div class="table-responsive">          
+            <table class="table">
+                   <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Author</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>License</th>
+                            <th>File Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ font.fontName }}</td>
+                            <td><a href={{font.fontURL}}>{{ font.fontAuthor }}</a></td>
+                            <td>{{ font.fontType }}</td>
+                            <td>{{ font.fontTypeDetailed }}</td>
+                            <td>{{ font.fontLicense }}</td>
+                            <td>{{ font.fileType }}</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+  
+    <div class="container" style="padding-bottom:2%">
+        <div class="column vertical-center-row">
+            <label for="comment">{{fontName}}</label> <!-- Name of Font-->
+            <!-- Placeholder text rendered in font style-->
+            <!-- Font randomly retrieved from database-->
+            <textarea style="font-family: currentFont;resize: none; font-size: 20pt;"
+            class="form-control" rows="5" id="comment">Pack My Red Box With Five Dozen Quality Jugs</textarea>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top:3%">                                                                                     
+        <div class="table-responsive">          
+            <table class="table">
+                   <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in tagWeights | orderBy:'-weight'">
+                        <div> 
+                            <td>{{ x.name }}</td>
+                            <td>{{ x.weight }}</a></td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    
+   
+    <div align="center" style="padding-bottom:2%">
+        <a href="http://api.fontacular.com/fonts/{{font.id}}/download"><button type="button" class="btn btn-primary">Download</button></a>
+    </div>
+    
+</div>

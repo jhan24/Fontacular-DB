@@ -1,0 +1,18 @@
+<div ng-controller="fontListCtrl">
+<input type="text" class="form-control" id="fontSearch" placeholder="Enter keywords..." ng-model="query">
+<div ng-repeat="font in fonts | filter:query">
+      <style type="text/css">
+        @font-face {font-family: {{font.fontName}};src: url("http://api.fontacular.com/fonts/{{font.id}}/render");}
+      </style>
+      
+      
+      <div style="border-bottom: 2px solid #ccc; padding-top:2%; padding-bottom:2%;">
+        <div style="padding-left:2%"><strong>{{font.fontName}}</strong> by <a href={{font.fontURL}} target="_blank">{{font.fontAuthor}}</a></div>
+        
+        <div style="font-size:200%; padding:0.5%; font-family: {{font.fontName}};" align="center">Heavy Boxes Perform Quick Waltzes and Jigs</div>
+        <div style="padding-right:2%" align="right">
+          <a href="#/fonts/{{font.id}}" button type="button" class="btn btn-default moreButton">More</a>
+        </div>
+      </div>
+    </div>
+</div>

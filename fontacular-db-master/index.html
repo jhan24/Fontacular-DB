@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="fontApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- jQuery library -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="controllers.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Fontacular Database</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a href="http://fontacular.com">Home</a></li>
+          <li role="presentation"><a href="http://db.fontacular.com/#/fonts">Database</a></li>
+          <li role="presentation"><a href="http://game.fontacular.com">Game</a></li>
+          <li role="presentation"><a href="http://fontacular.com/about.html">About</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Welcome bar -->
+    <div class="jumbotron" style="margin-bottom:0px !important;">
+        <div class="container">
+            <h1>FONTACULAR!</h1>
+            <p>Welcome to the Fontacular Database. </p>
+        </div>
+    </div>
+
+    <!--Body content-->
+
+    <div ng-view></div>
+    
+</body> 
